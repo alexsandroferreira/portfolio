@@ -1,3 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,800;1,200;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:ital,wght@0,100;0,400;0,600;1,100;1,400&display=swap');
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    /* view -heigt altura da tela no momento do carregamento*/
+    overflow: hidden;
+    /* evita que cabeçalho passar o tamanho da janela*/
+    position: relative;
+    /*elemet pai*/
+
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* evita que cabeçalho passar o tamanho da janela*/
+    background: rgba(0, 0, 0, 0.8);
+
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*como essa imagem vai agir no caso cobrir nossa div*/
+    opacity: 0.7;
+    animation: zoom 25s;
+
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.banner {
+    position: absolute;
+    /* elemento pai precisa ter ter position relative*/
+    top: 30%;
+    left: 15%;
+
+}
+
+.banner h1 {
+    color: #E0F7F4;
+    font-size: 3.5rem;
+    /*Acessibilidade:usar unidade de medida em escala */
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    text-shadow: .15rem .2rem 2px rgba(0, 0, 0, 0.4);
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveBanner 1s 0.3s forwards;
+}
+
+.banner p {
+    color: #E0F7F4;
+    font-size: 2rem;
+    font-family: "Raleway", sans-serif;
+    text-shadow: .15rem .1rem rgba(0, 0, 0, 0.4);
+    margin-bottom: 2rem;
+    animation: moveBanner 1s 0.5s forwards;
+    opacity: 0;
+}
+
+.banner button {
+    color: #fff;
+    font-family: " Open Sans"sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    padding: 1rem 3rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: moveBanner 1s 0.7s forwards;
+    background: #4ECDC4;
+    background: -webkit-linear-gradient(to right, #556270, #4ECDC4);
+    background: linear-gradient(to right, #556270, #4ECDC4);
+}
+
+.banner button:hover {
+    color: #000;
+}
+
+@keyframes moveBanner {
+    0% {
+        transform:translateY(10rem) rotateY(-30deg);
+    }
+    100% {
+        transform:translateY(0rem) rotateY(0);
+        opacity: 1;
+    }
+}
