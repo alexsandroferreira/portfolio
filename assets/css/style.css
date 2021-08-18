@@ -5,6 +5,81 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --font-primary: "Nunito", sans-serif;
+    --font-secundary: "Raleway", sans-serif;
+    --font-action: "Open Sans", sans-serif;
+}
+
+.hamburguer {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.show-menu .hamburguer {
+    right: 16rem;
+}
+
+.hamburguer span {
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4ECDC4;
+    color: #fff;
+    font-family: var(--font-action);
+    opacity: 0;
+}
+
+.hamburguer span::before {
+    content: "";
+    position: absolute;
+    border-right: .5rem solid #4ECDC4;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
+}
+
+.show-menu .hamburguer:hover span {
+    opacity: 1;
+    /*somente quando ouver click aparece*/
+}
+
+.line {
+    width: 100%;
+    height: .2rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, 0.4);
+    transition: transform 1.5s;
+}
+
+.show-menu #line1 {
+    transform: translate(.4rem, .4rem) rotate(45deg);
+}
+
+.show-menu #line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3 {
+    transform: translate(.3rem, -.5rem) rotate(-45deg);
 }
 
 header {
@@ -59,7 +134,7 @@ header {
     color: #E0F7F4;
     font-size: 3.5rem;
     /*Acessibilidade:usar unidade de medida em escala */
-    font-family: "Nunito", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 400;
     text-shadow: .15rem .2rem 2px rgba(0, 0, 0, 0.4);
     line-height: 3.5rem;
@@ -71,7 +146,7 @@ header {
 .banner p {
     color: #E0F7F4;
     font-size: 2rem;
-    font-family: "Raleway", sans-serif;
+    font-family: var(--font-secundary);
     text-shadow: .15rem .1rem rgba(0, 0, 0, 0.4);
     margin-bottom: 2rem;
     animation: moveBanner 1s 0.5s forwards;
@@ -80,7 +155,7 @@ header {
 
 .banner button {
     color: #fff;
-    font-family: " Open Sans"sans-serif;
+    font-family: var(--font-action);
     text-transform: uppercase;
     letter-spacing: .1rem;
     padding: 1rem 3rem;
@@ -100,10 +175,76 @@ header {
 
 @keyframes moveBanner {
     0% {
-        transform:translateY(10rem) rotateY(-30deg);
+        transform: translateY(10rem) rotateY(-30deg);
     }
+
     100% {
-        transform:translateY(0rem) rotateY(0);
+        transform: translateY(0rem) rotateY(0);
         opacity: 1;
     }
+
+}
+
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 1s;
+}
+
+.show-menu .sidebar {
+    right: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.menu-item {
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.menu-link {
+    color: #1db19f;
+    font-size: 1.5rem;
+    font-family: var(--font-action);
+    transition: color 1s;
+    transition: font-size 1s;
+}
+
+.menu-link:hover {
+    font-size: 1.6rem;
+    color: #556270;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media i {
+    color: #108577;
+    font-size: 2.5rem;
+    text-shadow: 0.1rem .1rem 1px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: color 1s;
+
+}
+
+.social-media i:hover {
+    color: #3fc9b9c0;
 }
