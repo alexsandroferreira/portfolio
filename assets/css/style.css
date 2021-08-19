@@ -368,8 +368,9 @@ header {
     opacity: 0.8;
     transition: opacity .3s;
 }
+
 .card:hover .card-img-wrapper img {
-opacity: .5;
+    opacity: .5;
 }
 
 .card-info {
@@ -379,15 +380,16 @@ opacity: .5;
     bottom: 0;
     padding: 2rem;
     text-shadow: .3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
-transition: all .3s;
+    transition: all .3s;
 }
 
 .card-info h2 {
     font-family: var(--font-primary);
     font-size: 2rem;
     font-weight: 400;
-    color:#eee
+    color: #eee
 }
+
 .card-info h3 {
     font-family: var(--font-action);
     font-weight: bolder;
@@ -402,22 +404,113 @@ transition: all .3s;
     color: #eee;
     margin-bottom: 2rem;
 }
-.card-info button {
-    width: 8rem;
-    height: 2.5rem;
-    border-radius: .5rem;
-    font-size: .9rem;
+.btn{
     color: #eee;
     text-transform: uppercase;
     border: none;
     cursor: pointer;
+    border-radius: .5rem;
     box-shadow: 0 .1rem .8rem rgba(0, 0, 0, 0.4);
     background: #4ECDC4;
     background: -webkit-linear-gradient(to right, #556270, #4ECDC4);
     background: linear-gradient(to right, #556270, #4ECDC4);
 }
-.card:hover .card-info{
-bottom: 2rem;
-opacity: 1;
-visibility: visible;
+
+.card-info button {
+    width: 8rem;
+    height: 2.5rem;
+    font-size: .9rem;
+    
+}
+
+.card:hover .card-info {
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sessao-contato {
+    width: 100%;
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato-wrapper {
+    width: 60%;
+    height: 35rem;
+    display: flex;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.6);
+}
+
+.contato-left {
+    width: 35%;
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)), url(/assets/img/img-forms.jpg);
+    background-size: cover;
+}
+.contato-right{
+    width: 65%;
+    background-color: #eee;
+    padding: 1.5rem 3rem 3rem 8rem;
+}
+.contato-right h1{
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-primary);
+    color: #272727;
+    font-weight: lighter;
+    font-size: 3rem; 
+}
+
+.contato-right form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-grup{
+    position: relative;
+}
+.input-grup textarea{
+    padding-top: 1rem;
+    max-width: 22rem;
+    max-height: 3rem;
+}
+.field{
+    background: transparent;
+    border: none;
+    width: 21rem;
+    font-size: 1.3rem;
+    font-family: var(--font-secundary);
+    border-bottom: 2px dashed #636363 ;
+    height: 3rem; 
+    outline: none;
+    margin: 2rem 0;
+}
+.field-label{
+    position: absolute;
+    left: 0;
+    top:2.8rem;
+    font-size: 1.3rem;
+    font-family: var(--font-secundary);
+    text-transform: uppercase;
+    transition: all .3s;
+}
+.field:focus ~ label{
+top: 0;
+font-size: 1rem;
+}
+.field:focus {
+    border-bottom:solid 1px;
+}
+.btn-submit{
+    text-transform: uppercase;
+    font-size: 1rem;
+    width: 65%;
+    height: 3rem;
+}
+.btn-submit:hover{
+    color: #000;
 }
