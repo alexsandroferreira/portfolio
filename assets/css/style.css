@@ -238,6 +238,7 @@ header {
 }
 
 .social-media i {
+    z-index: 160;
     color: #108577;
     font-size: 2.5rem;
     text-shadow: 0.1rem .1rem 1px rgba(0, 0, 0, 0.4);
