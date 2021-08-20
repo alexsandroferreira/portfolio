@@ -14,12 +14,15 @@
     --font-secundary: "Raleway", sans-serif;
     --font-action: "Open Sans", sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 .hamburguer {
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
+    z-index: 160;
     right: 2rem;
     top: 2rem;
     display: flex;
@@ -193,6 +196,7 @@ header {
     top: 0;
     right: -20rem;
     transition: all 1s;
+    z-index: 150;
 }
 
 .show-menu .sidebar {
@@ -345,6 +349,7 @@ header {
 .projetos {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 2rem;
 }
 
 .card {
@@ -576,5 +581,50 @@ font-size: 1rem;
     padding: 1rem;
     grid-column: 2;
 }
+footer{
+    width: 100%;
+    height: 6rem;
+    background-color: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content p{
+    font-family: var(--font-secundary);
+    color: #eee;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.social-list a{
+    color: #eee;
+    margin: 0 2rem;
+    font-size: 2rem;
+}
+
+.social-list ul{
+    display: flex;
+}
+#link-topo{
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 3rem;
+    bottom: 3rem;
+    color: #eee;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4ECDC4;
+    background: -webkit-linear-gradient(to right, #556270, #4ECDC4);
+    background: linear-gradient(to right, #556270, #4ECDC4);
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
 
 
+}
