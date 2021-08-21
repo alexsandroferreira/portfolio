@@ -779,7 +779,7 @@ footer {
 
 
     .conhecimentos {
-        grid-template-rows: repeat(9, 8rem);
+        grid-template-rows: repeat(9, 9rem);
     }
 
     .sessao-header h1 {
