@@ -195,9 +195,10 @@ header {
     background-color: #fff;
     position: fixed;
     top: 0;
-    right: -20rem;
+    right: -30rem;
     transition: all 1s;
     z-index: 150;
+    opacity: 0.75;
 }
 
 .show-menu .sidebar {
@@ -414,7 +415,7 @@ header {
     color: #eee;
     margin-bottom: 2rem;
 }
-
+/*=========================btn===========================*/
 .btn {
     color: #eee;
     text-transform: uppercase;
@@ -537,7 +538,7 @@ header {
 }
 
 
-
+/*=========================== sessão orçamento======================================================================*/
 .sessao-orcamento {
     width: 100%;
     height: 100vh;
@@ -663,10 +664,6 @@ footer {
         row-gap: .6rem;
     }
 
-    .conhecimento-header h3,
-    i {
-    
-    }
 
     .conhecimentos-img-wrapper {
         order: -1;
@@ -720,6 +717,13 @@ footer {
 
 @media (max-width: 576px) {
 
+    .show-menu .sidebar {
+        right: -3rem;
+    }
+
+    .show-menu .hamburguer {
+        right: 12rem;
+    }
     .contato-right form {
         width: 50%;
 
@@ -770,14 +774,7 @@ footer {
         height: 2.5rem;
     }
 
-
-
-
-
-
-
-
-
+/*==============================================================sessão conhecimentos ==========================================*/
     .conhecimentos {
         grid-template-rows: repeat(9, 9rem);
     }
@@ -846,5 +843,101 @@ footer {
         grid-row: 7;
         width: 80%;
     }
+
+
+
+    /*==================================sessao orçamento=====================================================================*/
+
+    .sessao-orcamento {
+        width: 100%;
+        height: 120vh;
+        background: url(/assets/img/img-orcamento.jpg);
+        object-fit: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .orcamento-wrapper {
+        width: 90%;
+        height: 70%;
+    }
+    
+    .orcamento-wrapper h1 {
+        position: absolute;
+        top: -3.5rem;
+        left: .5rem;
+        border-radius: .5rem;
+        font-size: 2.3rem;
+        padding: .4rem 3rem;
+        font-weight: 400;
+    }
+    
+    .sessao-orcamento form {
+        margin: 1.5rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: .9rem;
+        row-gap: 3rem;
+    }
+    
+    .sessao-orcamento label {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+
+
+    footer {
+        width: 100%;
+        height: 7rem;
+        background-color: #262626;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .footer-content {
+        width: 60%;
+        display: grid;
+grid-template-rows: auto;        
+    }
+    
+    .footer-content p {
+        font-size: .9rem;
+        font-weight: 500;
+    }
+    
+    .social-list a {
+        color: #eee;
+        margin: 0 2rem;
+        font-size: 1.5rem;
+    }
+    
+    .social-list ul {
+        display: flex;
+    }
+    
+    #link-topo {
+        position: fixed;
+        width: 3rem;
+        height: 3rem;
+        right: 3rem;
+        bottom: 3rem;
+        color: #eee;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #4ECDC4;
+        background: -webkit-linear-gradient(to right, #556270, #4ECDC4);
+        background: linear-gradient(to right, #556270, #4ECDC4);
+        box-shadow: 0 .1rem .8rem rgba(0, 0, 0, 0.4);
+        border-radius: 4px;
+    
+    
+    }
+    
+    
 
 }
