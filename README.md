@@ -1,7 +1,7 @@
 # Portfólio
 
 Portfólio do desenvolvedor:  modelo sigle-page application<br> 
-Tecnologias: HTML, CSS e javaScript<br>
+Tecnologias: `HTML` `CSS` `javaScript`<br>
 link:  https://alexsandroferreira.github.io/portfolio/
 
 
