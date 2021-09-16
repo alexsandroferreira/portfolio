@@ -1,10 +1,12 @@
-# Portfolio
+# Portfólio
 
-Portifolio do desenvolvedor:  modelo sigle-page application 
+Portfólio do desenvolvedor:  modelo sigle-page application<br> 
+link:  https://alexsandroferreira.github.io/portfolio/
+
 
 ## Oganização das tarefas.
 
-O controle das tarefas serão feitas pelo GitHub.
+O controle das tarefas serão feitas pelo GitHub
 
 ## Icones
 - :package: Nova funcionalidade
